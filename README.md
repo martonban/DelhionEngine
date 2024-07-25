@@ -1,3 +1,4 @@
+![Cover](delhion_logo.png)
 # DelhionEngine (WIP)
 
 # What is DelhionEngine
