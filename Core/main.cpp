@@ -19,8 +19,10 @@ int main() {
 	// OpenGL version
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+
 	// No backward compatibility
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
 	// We support forward compatibility
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
@@ -49,7 +51,7 @@ int main() {
 		return 1;
 	}
 
-	// Setup ViewPort size
+	// Setup ViewPort
 	glViewport(0, 0, bufferWidth, bufferHeight);
 
 	// LOOP 
@@ -58,7 +60,7 @@ int main() {
 		glfwPollEvents();
 
 		// Clear Window
-		glClearColor(0.2f, 0.2f, 1.0f, 1.0f);
+		glClearColor(.2f, .2f, .2f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		glfwSwapBuffers(mainWindow);
