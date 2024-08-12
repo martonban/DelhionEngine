@@ -1,12 +1,12 @@
 #include "Window.h"
 
 
-Window::Window(GLint width, GLint height) {
+void Window::Init(GLint width, GLint height) {
 	m_width = width;
 	m_height = height;
 }
 
-void Window::Init() {
+void Window::Start() {
 	// Init GLFW
 	if (!glfwInit()) {
 		glfwTerminate();

@@ -8,9 +8,18 @@
 class Window
 {
 public:
-	Window(GLint width, GLint height);
-	void Init();
+	void Init(GLint width, GLint height);
+	void Start();
 	void Loop();
+
+
+	static Window& GetInstance() {
+		static Window instance;
+		return instance;
+	}
+
+protected:
+	Window() = default;
 
 private:
 	GLint m_width;

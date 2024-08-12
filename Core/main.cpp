@@ -10,10 +10,12 @@ const GLint WIDTH = 800, HEIGHT = 600;
 
 int main() {
 
-	Window window(1300, 800);
+	Window& window = Window::GetInstance();
+
+	window.Init(1300, 800);
 	
 	try {
-		window.Init();
+		window.Start();
 	}
 	catch (const std::exception& e) {
 		std::cout << "ERROR: " << e.what();
